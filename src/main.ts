@@ -9,7 +9,7 @@ async function run(): Promise<void> {
     const appOctokit = new Octokit({
       authStrategy: createAppAuth,
       auth: {
-        id,
+        appId: id,
         privateKey,
       },
       baseUrl: process.env['GITHUB_API_URL'] || 'https://api.github.com',
